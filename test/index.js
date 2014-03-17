@@ -66,4 +66,14 @@ describe('expression', function(){
     assert(result === 36);
   })
 
+  it('should accept a context', function () {
+    var context = {
+      one: 1,
+      two: 2
+    };
+    var exp = new Expression("this.one + this.two");
+    var result = exp.exec(null, context);
+    assert(result === 3);
+  });
+
 })

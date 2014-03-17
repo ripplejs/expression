@@ -3,13 +3,16 @@ var unique = require('uniq');
 var cache = {};
 
 function Expression(str) {
-  this.props = unique(props(str));
+  this.props = unique(props(str)).filter(function(prop){
+    return prop != 'this';
+  });
   this.fn = compile(str, this.props);
 }
 
-Expression.prototype.exec = function(obj){
-  var args = obj ? values(obj, this.props) : [];
-  return this.fn.apply(null, args);
+Expression.prototype.exec = function(scope, context){
+  scope = scope || {};
+  var args = scope ? values(scope, this.props) : [];
+  return this.fn.apply(context, args);
 };
 
 function values(obj, keys) {
