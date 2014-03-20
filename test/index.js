@@ -76,4 +76,9 @@ describe('expression', function(){
     assert(result === 3);
   });
 
+  it('should convert to a string', function () {
+    var exp = new Expression("this.one + this.two");
+    assert(exp.toString() === "this.one + this.two");
+  });
+
 })
