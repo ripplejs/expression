@@ -4,9 +4,7 @@ var cache = {};
 
 function Expression(str) {
   this.str = str;
-  this.props = unique(props(str)).filter(function(prop){
-    return prop != 'this';
-  });
+  this.props = unique(props(str));
   this.fn = compile(str, this.props);
 }
 
