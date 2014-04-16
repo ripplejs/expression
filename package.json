@@ -1,27 +1,8 @@
 {
   "name": "ripplejs-expression",
-  "version": "0.2.0",
-  "description": "Evaluate expressions using context and scope",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "make test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ripplejs/expression.git"
-  },
-  "keywords": [
-    "expression",
-    "interpolate",
-    "template",
-    "string"
-  ],
-  "author": "Anthony Short",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ripplejs/expression/issues"
+  "version": "0.2.1",
+  "dependencies": {
+    "component-props": "~1.1.1",
+    "yields-uniq": "git://github.com/npmcomponent/yields-uniq"
   }
 }

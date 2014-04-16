@@ -1,5 +1,5 @@
-var props = require('props');
-var unique = require('uniq');
+var props = require('component-props');
+var unique = require('yields-uniq');
 var cache = {};
 
 function Expression(str) {
